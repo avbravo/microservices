@@ -5,6 +5,10 @@
  */
 package com.avbravo.microservices.entity;
 
+import com.avbravo.ejbjmoordb.anotations.Embedded;
+import com.avbravo.ejbjmoordb.pojos.UserInfo;
+import java.util.List;
+
 /**
  *
  * @author avbravo
@@ -12,6 +16,16 @@ package com.avbravo.microservices.entity;
 public class Pais {
     private String idpais;
     private String pais;
+     @Embedded
+    private List<UserInfo> userInfo;
+
+    public List<UserInfo> getUserInfo() {
+        return userInfo;
+    }
+
+    public void setUserInfo(List<UserInfo> userInfo) {
+        this.userInfo = userInfo;
+    }
 
     public String getIdpais() {
         return idpais;

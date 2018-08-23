@@ -16,6 +16,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import org.bson.Document;
 
 /**
  *
@@ -34,12 +35,12 @@ public class PaisResources {
     public Pais find(@PathParam("idpais") String idpais) {
         Pais pais = new Pais();
         try {
-            pais.setIdpais(idpais);
-            Optional<Pais> optional = paisRepository.findById(pais);
-            if (optional.isPresent()) {
-                pais = optional.get();
+            List<Pais> list = paisRepository.findBy(new Document("idpais",idpais));
+            if(!list.isEmpty()){
+                pais= list.get(0);
+                
             }
-
+     
         } catch (Exception e) {
             System.out.println("Error find() " + e.getLocalizedMessage());
         }
