@@ -27,16 +27,22 @@
             <artifactId>primefaces</artifactId>
             <version>6.2</version>
         </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>storeejb</artifactId>
-            <version>18.08.4</version>
-        </dependency>
+       
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
             <version>${version.javaee}</version>
             <scope>provided</scope>
+        </dependency>
+         <dependency>
+            <groupId>com.github.avbravo</groupId>
+            <artifactId>ejbjmoordb</artifactId>
+            <version>0.8.5</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.avbravo</groupId>
+            <artifactId>avbravoutils</artifactId>
+            <version>0.26</version>
         </dependency>
     </dependencies>
 
@@ -90,5 +96,10 @@
             <layout>default</layout>
             <name>Repository for library PrimeFaces-maven-lib</name>
         </repository>
+                <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+
     </repositories>
 </project>

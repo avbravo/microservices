@@ -5,8 +5,8 @@
  */
 package com.avbravo.microservices;
 
-import com.avbravo.storeejb.entity.Pais;
-import com.avbravo.storeejb.repository.PaisRepository;
+import com.avbravo.microservices.entity.Pais;
+import com.avbravo.microservices.repository.PaisRepository;
 import java.util.List;
 import java.util.Optional;
 import javax.ejb.Stateless;
@@ -16,7 +16,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import org.bson.Document;
 
 /**
  *

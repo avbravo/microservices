@@ -5,8 +5,8 @@
  */
 package com.avbravo.microservices;
 
-import com.avbravo.storeejb.entity.Tamano;
-import com.avbravo.storeejb.repository.TamanoRepository;
+import com.avbravo.microservices.entity.Tamano;
+import com.avbravo.microservices.repository.TamanoRepository;
 import java.net.URI;
 import java.util.Optional;
 import javax.ejb.Stateless;
